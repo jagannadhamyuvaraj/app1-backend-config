@@ -1,20 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
-  namespace: app1-ns
+  name: be-deploy
+  namespace: product1-ns
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend
+      app: be
   template:
     metadata:
       labels:
-        app: backend
+        app: be
     spec:
       containers:
-        - name: backend
-          image: jagannadhamyuvaraj/app1-backend:v1.0.0
+        - name: be-container
+          image: jagannadhamyuvaraj/product1-be:v1.0.0
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
