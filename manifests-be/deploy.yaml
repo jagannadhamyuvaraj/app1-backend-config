@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: be-container
-          image: jagannadhamyuvaraj/product1-be:v1.0.0
+          image: jagannadhamyuvaraj/product-be:v1.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 5000
